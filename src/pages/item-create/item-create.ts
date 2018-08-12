@@ -13,28 +13,63 @@ declare var google;
 })
 export class ItemCreatePage {
   @ViewChild('fileInput') fileInput;
-
   isReadyToSave: boolean;
-
   item: any;
+  map: any;
 
   form: FormGroup;
 
-  constructor(public navCtrl: NavController,private alertCtrl: AlertController, private geolocation: Geolocation, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
+  constructor(public navCtrl: NavController, private geolocation: Geolocation, 
+    public viewCtrl: ViewController, formBuilder: FormBuilder, 
+    public camera: Camera, private alertCtrl: AlertController) {
     this.form = formBuilder.group({
       profilePic: [''],
       name: ['', Validators.required],
       about: ['']
     });
-
-    // Watch the form for changes, and
     this.form.valueChanges.subscribe((v) => {
       this.isReadyToSave = this.form.valid;
     });
   }
 
   ionViewDidLoad() {
+    this.getPosition();
+  }
 
+  getPosition(): any {
+    this.geolocation.getCurrentPosition().then(response => {
+      this.loadMap(response);
+    })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  loadMap(position: Geoposition) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    console.log(latitude, longitude);
+
+    // create a new map by passing HTMLElement
+    let mapEle: HTMLElement = document.getElementById('map');
+
+    // create LatLng object
+    let myLatLng = { lat: latitude, lng: longitude };
+
+    // create map
+    this.map = new google.maps.Map(mapEle, {
+      center: myLatLng,
+      zoom: 20
+    });
+
+    google.maps.event.addListenerOnce(this.map, 'idle', () => {
+      let marker = new google.maps.Marker({
+        position: myLatLng,
+        map: this.map,
+        title: 'Hello World!'
+      });
+      mapEle.classList.add('show-map');
+    });
   }
 
   getPicture() {
@@ -70,7 +105,7 @@ export class ItemCreatePage {
 
   /**
    * The user cancelled, so we dismiss without sending data back.
-   */
+     */
   cancel() {
     this.viewCtrl.dismiss();
   }
@@ -79,6 +114,7 @@ export class ItemCreatePage {
    * The user is done and wants to create the item, so return it
    * back to the presenter.
    */
+
   done() {
     let alert = this.alertCtrl.create({
       title: 'Confirm',
@@ -95,7 +131,7 @@ export class ItemCreatePage {
           text: 'Confirmar',
           handler: () => {
             console.log('Buy clicked');
-            this.navCtrl.push('WelcomePage');
+            this.navCtrl.push('ListMasterPage');
           }
         }
       ]
