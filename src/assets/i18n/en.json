@@ -64,5 +64,7 @@
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Search",
-  "SEARCH_PLACEHOLDER": "De que lugar quieres estar al tanto?"
+  "SEARCH_PLACEHOLDER": "De que lugar quieres estar al tanto?",
+
+  "NOTIFICATIONS" : "Notifications"
 }

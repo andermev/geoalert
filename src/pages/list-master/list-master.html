@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <ion-title>{{ 'NOTIFICATIONS' | translate }}</ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="addItem()">
@@ -22,6 +22,8 @@
         </ion-avatar>
         <h2>{{item.name}}</h2>
         <p>{{item.about}}</p>
+        <p>{{item.location.latitude}}</p>
+        <p>{{item.location.longitude}}</p>
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 
