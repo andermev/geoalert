@@ -7,48 +7,68 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
+    "name": "Alerta de riesgo sismico",
+    "profilePic": "assets/img/speakers/issue1.png",
     "about": "Burt is a Bear.",
+    "user": "Andres Gomez",
+    "location": {
+      "latitude" : "6.264983",
+      "longitude" : "-75.567009",
+    }
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Alerta de riesgo sismico",
+        "profilePic": "assets/img/speakers/issue1.png",
+        "about": "Alerta de riesgo sismico.",
+        "user": "Andres Gomez",
+        "location": {
+          "latitude" : "6.264983",
+          "longitude" : "-75.567009",
+        }
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Notificacion de aumento de quebrada",
+        "profilePic": "assets/img/speakers/issue2.png",
+        "about": "Notificacion de aumento de quebrada.",
+        "user": "Carolina Perez",
+        "location": {
+          "latitude" : "6.264983",
+          "longitude" : "-75.567009",
+        }
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Notificacion de aumento de quebrada",
+        "profilePic": "assets/img/speakers/issue3.png",
+        "about": "Notificacion de aumento de quebrada.",
+        "user": "Laura Restrepo",
+        "location": {
+          "latitude" : "6.264983",
+          "longitude" : "-75.567009",
+        }
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "Notificacion de vientos muy fuertes",
+        "profilePic": "assets/img/speakers/issue1.png",
+        "about": "Notificacion de vientos muy fuertes.",
+        "user": "Javier Ortega",
+        "location": {
+          "latitude" : "6.264983",
+          "longitude" : "-75.567009",
+        }
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "Notificacion de vientos muy fuertes",
+        "profilePic": "assets/img/speakers/issue2.png",
+        "about": "Notificacion de vientos muy fuertes.",
+        "user": "Camilo Quiroz",
+        "location": {
+          "latitude" : "6.264983",
+          "longitude" : "-75.567009",
+        }
       }
     ];
 
