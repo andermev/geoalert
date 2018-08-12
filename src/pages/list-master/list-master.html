@@ -22,8 +22,10 @@
         </ion-avatar>
         <h2>{{item.name}}</h2>
         <p>{{item.about}}</p>
-        <p>{{item.location.latitude}}</p>
-        <p>{{item.location.longitude}}</p>
+        <div><h2>Ubicacion:</h2>
+          <p>Latitud: {{item.location.latitude}}</p>
+          <p>Longitud: {{item.location.longitude}}</p>
+        </div>        
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 

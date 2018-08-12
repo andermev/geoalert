@@ -9,7 +9,7 @@ export class Items {
   defaultItem: any = {
     "name": "Alerta de riesgo sismico",
     "profilePic": "assets/img/speakers/issue1.png",
-    "about": "Burt is a Bear.",
+    "about": "Alerta de riesgo sismico.",
     "user": "Andres Gomez",
     "location": {
       "latitude" : "6.264983",
@@ -61,9 +61,9 @@ export class Items {
         }
       },
       {
-        "name": "Notificacion de vientos muy fuertes",
+        "name": "Alerta de desbordamiento de rio",
         "profilePic": "assets/img/speakers/issue2.png",
-        "about": "Notificacion de vientos muy fuertes.",
+        "about": "Alerta de desbordamiento de rio.",
         "user": "Camilo Quiroz",
         "location": {
           "latitude" : "6.264983",
