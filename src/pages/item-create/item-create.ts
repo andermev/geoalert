@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { AlertController } from 'ionic-angular';
 declare var google;
 
 @IonicPage()
@@ -18,7 +19,7 @@ export class ItemCreatePage {
 
   form: FormGroup;
 
-  constructor(public navCtrl: NavController, private geolocation: Geolocation, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController, private geolocation: Geolocation, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
     this.form = formBuilder.group({
       profilePic: [''],
       name: ['', Validators.required],
@@ -112,8 +113,27 @@ export class ItemCreatePage {
    * back to the presenter.
    */
   done() {
-    if (!this.form.valid) { return; }
-    this.viewCtrl.dismiss(this.form.value);
+    let alert = this.alertCtrl.create({
+      title: 'Confirm',
+      message: '¿quieres guardar esta alerta?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: () => {
+            console.log('Buy clicked');
+            this.navCtrl.push('WelcomePage');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }
