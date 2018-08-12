@@ -1,11 +1,11 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'ITEM_CREATE_TITLE' | translate }}</ion-title>
+    <ion-title>Nueva Alerta</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
         <span color="primary" showWhen="ios">
-          {{ 'CANCEL_BUTTON' | translate }}
+          cancelar
         </span>
         <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
@@ -19,7 +19,6 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -37,11 +36,13 @@
     </div>
     <ion-list>
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_NAME_PLACEHOLDER' | translate }}" formControlName="name"></ion-input>
+        <ion-input type="text" placeholder="¿Que esta Pasando?" formControlName="name"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_ABOUT_PLACEHOLDER' | translate }}" formControlName="about"></ion-input>
+        <ion-input type="text" placeholder="Detalles" formControlName="about"></ion-input>
       </ion-item>
     </ion-list>
   </form>
+  <div id="map"></div>
+
 </ion-content>
