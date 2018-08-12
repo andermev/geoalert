@@ -1,10 +1,8 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
-
-declare var google: any;
 
 @IonicPage()
 @Component({
@@ -13,13 +11,12 @@ declare var google: any;
 })
 export class SearchPage {
 
-  @ViewChild('map') mapElement: ElementRef;
   map: any;
   currentItems: any = [];
-
+  
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     public items: Items, public platform: Platform) { 
-      this.initMap();
     }
 
   /**
@@ -45,14 +42,6 @@ export class SearchPage {
     });
   }
 
-  /**
-   * Init Google maps.
-   */
-  initMap() {
-    this.map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 7,
-      center: {lat: 41.85, lng: -87.65}
-    });
-  }
+
 
 }
