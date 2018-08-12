@@ -13,9 +13,10 @@ declare var google;
 })
 export class ItemCreatePage {
   @ViewChild('fileInput') fileInput;
+
   isReadyToSave: boolean;
+
   item: any;
-  map: any;
 
   form: FormGroup;
 
@@ -25,49 +26,15 @@ export class ItemCreatePage {
       name: ['', Validators.required],
       about: ['']
     });
+
+    // Watch the form for changes, and
     this.form.valueChanges.subscribe((v) => {
       this.isReadyToSave = this.form.valid;
     });
   }
 
   ionViewDidLoad() {
-    this.getPosition();
-  }
 
-  getPosition(): any {
-    this.geolocation.getCurrentPosition().then(response => {
-      this.loadMap(response);
-    })
-      .catch(error => {
-        console.log(error);
-      })
-  }
-
-  loadMap(position: Geoposition) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    console.log(latitude, longitude);
-
-    // create a new map by passing HTMLElement
-    let mapEle: HTMLElement = document.getElementById('map');
-
-    // create LatLng object
-    let myLatLng = { lat: latitude, lng: longitude };
-
-    // create map
-    this.map = new google.maps.Map(mapEle, {
-      center: myLatLng,
-      zoom: 20
-    });
-
-    google.maps.event.addListenerOnce(this.map, 'idle', () => {
-      let marker = new google.maps.Marker({
-        position: myLatLng,
-        map: this.map,
-        title: 'Hello World!'
-      });
-      mapEle.classList.add('show-map');
-    });
   }
 
   getPicture() {
@@ -103,7 +70,7 @@ export class ItemCreatePage {
 
   /**
    * The user cancelled, so we dismiss without sending data back.
-     */
+   */
   cancel() {
     this.viewCtrl.dismiss();
   }
@@ -135,5 +102,4 @@ export class ItemCreatePage {
     });
     alert.present();
   }
-
 }

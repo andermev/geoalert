@@ -5,20 +5,20 @@
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
 
-  "TAB1_TITLE": "Items",
-  "TAB2_TITLE": "Buscar",
+  "TAB1_TITLE": "Exprorar",
+  "TAB2_TITLE": "Mi Entorno",
   "TAB3_TITLE": "Ajustes",
 
   "MAP_TITLE": "Mapa",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a GeoAlert",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Tu <b>Compañero</b> que estarà al tanto de tu ubicacion y lo que sucede que pueda afectar tu bienestar",
 
-  "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
+  "TUTORIAL_SLIDE2_TITLE": "Cual es mi funcion",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Que  con tu con tu ayuda puedas reportar cualquier evento que este sucediendo a tu alrededor y lo reportes para que otros tambien esten atentos",
 
-  "TUTORIAL_SLIDE3_TITLE": "Empezando",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
+  "TUTORIAL_SLIDE3_TITLE": "Cultura de Prevencion",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Con tu ayuda tu y personas cercanas a tu entorno estaran al tanto de lo que sucede y tomar acciones para prevenir",
 
   "SETTINGS_TITLE": "Ajustes",
   "SETTINGS_OPTION1": "Opción 1",

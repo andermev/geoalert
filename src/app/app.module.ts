@@ -17,7 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
 import { AuthService } from '../providers/services/aut.service';
-import { Geolocation } from '@ionic-native/geolocation';
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -70,7 +70,6 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     AuthService,
     AngularFireAuth,
-    Geolocation,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }
